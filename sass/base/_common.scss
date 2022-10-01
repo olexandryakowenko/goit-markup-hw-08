@@ -1,0 +1,41 @@
+body {
+	font-family: "Roboto", sans-serif;
+	color: var(--main-text-color);
+}
+
+.link,
+.logo-link {
+	text-decoration: none;
+
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: var(--cubic);
+}
+
+.logo-link:focus {
+	color: var(--accent-color);
+}
+
+.link:hover,
+.link:focus {
+	color: var(--accent-color);
+}
+
+.current.link {
+	color: var(--accent-color);
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -1px;
+		display: block;
+		width: 100%;
+		height: 4px;
+		border-radius: 2px;
+		background-color: var(--accent-color);
+	}
+}
+
+.list {
+	list-style: none;
+}

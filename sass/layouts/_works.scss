@@ -1,0 +1,30 @@
+.works {
+	display: none;
+
+	@include desktop {
+		display: contents;
+	}
+}
+
+.works__list {
+	@include position(flex, space-between, null);
+	gap: 30px;
+}
+
+.works__item {
+	position: relative;
+	width: calc((100% - 60px) / 3);
+}
+
+.works__subtitle {
+	position: absolute;
+	@include position(flex, center, center);
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	@include font(14, 1.14, 700, 0.03em);
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--white-color);
+	background-color: rgba(47, 48, 58, 0.8);
+}

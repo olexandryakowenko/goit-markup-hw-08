@@ -1,0 +1,41 @@
+.principles__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.principles__item {
+	width: 100%;
+
+	@include tablet {
+		width: calc((100% - 30px) / 2);
+	}
+
+	@include desktop {
+		width: calc((100% - 90px) / 4);
+	}
+}
+
+.principles__subtitle {
+	@include font(14, 1.14, 700, 0.03em);
+	text-transform: uppercase;
+	color: $header-color;
+	margin-bottom: 10px;
+	text-align: center;
+
+	@include tablet {
+		text-align: left;
+	}
+}
+.principles__text {
+	@include font(14, 1.71, null, 0.03em);
+	width: 100%;
+}
+
+.principles__card {
+	@include position(flex, center, center);
+	height: 120px;
+	background-color: #f5f4fa;
+	border-radius: 4px;
+	margin-bottom: 30px;
+}

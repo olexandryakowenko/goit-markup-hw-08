@@ -1,0 +1,112 @@
+.btn {
+	font-family: inherit;
+	@include font(16, 1.88, 700, 0.06em);
+	height: 50px;
+	color: var(--white-color);
+	background-color: var(--accent-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border: transparent;
+	border-radius: 4px;
+
+	cursor: pointer;
+	transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic);
+
+	&--hero {
+		min-width: 200px;
+		padding: 10px 24px;
+
+		@include desktop {
+			min-width: 216px;
+			padding: 10px 32px;
+		}
+	}
+
+	&--footer {
+		@include position(flex, center, center);
+		padding: 10px 28px 10px 31px;
+		gap: 12px;
+		margin: auto;
+
+		@include desktop {
+			padding: 10px 28px;
+			gap: 10px;
+		}
+	}
+
+	&--modal {
+		display: block;
+		width: 200px;
+		margin: 30px auto 0;
+	}
+}
+
+.menu__btn {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	background-color: transparent;
+	border: none;
+
+	@include tablet {
+		display: none;
+	}
+
+	@include desktop {
+		display: none;
+	}
+}
+
+.close__btn {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	@include position(flex, center, center);
+	width: 30px;
+	height: 30px;
+	padding: 6px 6px;
+	background-color: var(--white-color);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	cursor: pointer;
+
+	transition: fill 250ms var(--cubic);
+	&:hover {
+		fill: var(--accent-color);
+	}
+}
+
+.portfolio-btn {
+	font-family: inherit;
+	@include font(16, 1.62, 500, 0.03em);
+	text-align: center;
+	color: $header-color;
+	background-color: #f5f4fa;
+	border-radius: 4px;
+	border: transparent;
+	padding: 6px 22px;
+	cursor: pointer;
+
+	&--first {
+		padding: 6px 25px;
+	}
+
+	transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic), color 250ms var(--cubic);
+}
+
+.btn:hover,
+.portfolio-btn:hover {
+	background-color: var(--accent-color);
+	color: var(--white-color);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.btn:focus,
+.portfolio-btn:focus {
+	background-color: var(--accent-color);
+	color: var(--white-color);
+}
+
+.btn--modal:hover,
+.btn--modal:focus {
+	background: #188ce8;
+}

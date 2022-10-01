@@ -1,0 +1,36 @@
+.logo {
+	font-family: "Raleway";
+	@include font(24, 1.17, 700, 0.03em);
+	color: #000000;
+
+	@include desktop {
+		@include font(26, 1.19, 700, 0.03em);
+	}
+
+	& span {
+		color: var(--accent-color);
+	}
+
+	&--header {
+		padding-top: 16px;
+		padding-bottom: 16px;
+
+		@include tablet {
+			padding-top: 26px;
+			padding-bottom: 26px;
+			margin-right: 87px;
+		}
+
+		@include desktop {
+			padding-top: 24px;
+			padding-bottom: 25px;
+			margin-right: 93px;
+		}
+	}
+
+	&--footer {
+		display: inline-block;
+		color: var(--white-color);
+		margin-bottom: 20px;
+	}
+}
